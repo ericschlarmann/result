@@ -9,7 +9,7 @@ import org.assertj.core.api.ObjectAssert;
  */
 public class ResultAssert<A, E> extends AbstractAssert<ResultAssert<A, E>, Result<A, E>> {
 	public static <B, F> ResultAssert<B, F> assertThat(Result<B, F> actual) {
-		return new ResultAssert<B, F>(actual);
+		return new ResultAssert<>(actual);
 	}
 
 	public ResultAssert(Result<A, E> actual) {

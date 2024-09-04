@@ -138,7 +138,7 @@ public sealed interface Result<A, E> {
 	default Optional<A> consumeError() {
 		return switch (this) {
 			case Ok(A ok) -> Optional.of(ok);
-			case Error(E error) -> Optional.empty();
+			case Error(_) -> Optional.empty();
 		};
 	}
 
