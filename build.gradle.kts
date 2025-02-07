@@ -3,7 +3,7 @@ plugins {
     id("java-test-fixtures")
 }
 
-group = "com.seriq"
+group = "com.schlarmann"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -24,4 +24,8 @@ tasks.test {
 java {
     withSourcesJar()
     withJavadocJar()
+
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
 }
